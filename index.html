@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Mukesh Delu</title>
+<meta name="description" content="Dr. Mukesh Delu — Assistant Professor of Mathematics, Department of College Education, Government of Rajasthan. Research in fractional calculus, medical image processing and deep learning.">
+<meta name="author" content="Mukesh Delu">
+<meta property="og:title" content="Dr. Mukesh Delu">
+<meta property="og:description" content="Assistant Professor of Mathematics · Fractional calculus, medical image processing, machine learning and deep learning.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6f5c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23fff' text-anchor='middle'%3EMD%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#fbfaf8; --surface:#ffffff; --surface-2:#f4f2ee;
+    --text:#16181c; --muted:#5e626b; --faint:#8b8f99;
+    --line:#e7e3dc; --accent:#1f6f5c; --accent-ink:#13513f; --accent-wash:#e9f3ef;
+    --shadow:0 1px 2px rgba(20,22,26,.04), 0 10px 30px rgba(20,22,26,.06);
+    --on-accent:#ffffff;
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d0f12; --surface:#14171c; --surface-2:#1a1e24;
+      --text:#eceef2; --muted:#9ba1ac; --faint:#787f8a;
+      --line:#262b33; --accent:#6ed0b1; --accent-ink:#9ae3cb; --accent-wash:#16281f;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 40px rgba(0,0,0,.35);
+      --on-accent:#07130f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d0f12; --surface:#14171c; --surface-2:#1a1e24;
+    --text:#eceef2; --muted:#9ba1ac; --faint:#787f8a;
+    --line:#262b33; --accent:#6ed0b1; --accent-ink:#9ae3cb; --accent-wash:#16281f;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 40px rgba(0,0,0,.35);
+    --on-accent:#07130f;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    font-size:16px; line-height:1.65; letter-spacing:-.005em;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 16px}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline; text-underline-offset:3px}
+  h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif; font-weight:500; letter-spacing:-.015em; line-height:1.15; margin:0}
+
+  /* ---------- top bar ---------- */
+  header.bar{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:saturate(1.4) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar-in{max-width:960px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px}
+  .brand{font-family:Newsreader,serif; font-size:17px; font-weight:600; color:var(--text); white-space:nowrap}
+  .brand:hover{text-decoration:none}
+  nav.links{margin-left:auto; display:flex; gap:4px; align-items:center; flex-wrap:wrap}
+  nav.links a{
+    color:var(--muted); font-size:13.5px; font-weight:500;
+    padding:6px 9px; border-radius:8px;
+  }
+  nav.links a:hover{color:var(--text); background:var(--surface-2); text-decoration:none}
+  .theme-btn{
+    border:1px solid var(--line); background:var(--surface); color:var(--muted);
+    width:32px; height:32px; border-radius:9px; cursor:pointer; flex:0 0 auto;
+    display:grid; place-items:center; font-size:14px; line-height:1;
+  }
+  .theme-btn:hover{color:var(--text); border-color:var(--faint)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:52px 0 8px}
+  .hero-grid{display:grid; grid-template-columns:168px 1fr; gap:34px; align-items:start}
+  .portrait{
+    width:168px; height:200px; object-fit:cover; object-position:center 18%;
+    border-radius:var(--radius); border:1px solid var(--line);
+    background:var(--surface-2); box-shadow:var(--shadow);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:7px;
+    font-size:11.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--accent-ink); background:var(--accent-wash);
+    border:1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+    padding:4px 10px; border-radius:999px;
+  }
+  .hero h1{font-size:clamp(2.1rem, 6vw, 3.1rem); margin:14px 0 6px}
+  .role{font-size:1.06rem; color:var(--text); font-weight:500}
+  .affil{color:var(--muted); font-size:.97rem; margin-top:2px}
+  .contact-line{margin-top:14px; font-size:.92rem; color:var(--muted)}
+  .contact-line code{font-family:inherit}
+
+  .cta-row{display:flex; flex-wrap:wrap; gap:9px; margin-top:20px}
+  .btn{
+    display:inline-flex; align-items:center; gap:7px;
+    border:1px solid var(--line); background:var(--surface); color:var(--text);
+    padding:8px 13px; border-radius:10px; font-size:13.5px; font-weight:500;
+    box-shadow:0 1px 1px rgba(20,22,26,.03);
+  }
+  .btn:hover{text-decoration:none; border-color:var(--accent); color:var(--accent-ink); background:var(--accent-wash)}
+  .btn svg{width:15px; height:15px; flex:0 0 auto}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:var(--on-accent)}
+  .btn.primary:hover{filter:brightness(1.06); color:var(--on-accent); background:var(--accent)}
+
+  /* ---------- sections ---------- */
+  section{padding:46px 0; border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  .sec-head{display:flex; align-items:baseline; gap:12px; margin-bottom:22px; flex-wrap:wrap}
+  .sec-head h2{font-size:1.65rem}
+  .sec-head .count{font-size:12px; color:var(--faint); font-variant-numeric:tabular-nums}
+  .lead{font-size:1.04rem; color:var(--text)}
+  .lead + .lead{margin-top:14px}
+  p{margin:0 0 14px}
+  p:last-child{margin-bottom:0}
+
+  .tags{display:flex; flex-wrap:wrap; gap:7px; margin-top:20px}
+  .tag{
+    font-size:12.5px; color:var(--muted); background:var(--surface-2);
+    border:1px solid var(--line); padding:4px 10px; border-radius:999px;
+  }
+
+  /* timeline */
+  .timeline{list-style:none; margin:0; padding:0; position:relative}
+  .timeline:before{content:""; position:absolute; left:6px; top:8px; bottom:8px; width:1px; background:var(--line)}
+  .timeline li{position:relative; padding:0 0 22px 28px}
+  .timeline li:last-child{padding-bottom:0}
+  .timeline li:before{
+    content:""; position:absolute; left:0; top:7px; width:13px; height:13px;
+    border-radius:50%; background:var(--bg); border:2px solid var(--accent);
+  }
+  .timeline .t{font-weight:600; font-size:.98rem}
+  .timeline .s{color:var(--muted); font-size:.9rem}
+
+  /* cards */
+  .cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:14px}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px; box-shadow:var(--shadow);
+  }
+  .card h3{font-size:1.12rem; margin-bottom:6px}
+  .card p{font-size:.92rem; color:var(--muted); margin:0}
+  .card .more{display:inline-block; margin-top:12px; font-size:13px; font-weight:500}
+
+  .thesis{
+    background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:var(--radius); padding:20px; box-shadow:var(--shadow);
+  }
+  .thesis .label{font-size:11.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--faint)}
+  .thesis h3{font-size:1.2rem; margin:8px 0 14px; font-style:italic}
+  .meta-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; font-size:.9rem}
+  .meta-grid dt{color:var(--faint); font-size:11.5px; letter-spacing:.07em; text-transform:uppercase; margin-bottom:3px}
+  .meta-grid dd{margin:0; color:var(--text)}
+
+  /* publications */
+  .pubs{list-style:none; margin:0; padding:0}
+  .pub{
+    display:grid; grid-template-columns:58px 1fr; gap:18px;
+    padding:18px 0; border-bottom:1px solid var(--line);
+  }
+  .pub:last-child{border-bottom:0}
+  .pub .yr{
+    font-family:Newsreader,serif; font-size:1.02rem; color:var(--faint);
+    font-variant-numeric:tabular-nums; padding-top:1px;
+  }
+  .pub h3{font-size:1.05rem; line-height:1.35; margin-bottom:6px}
+  .pub h3 a{color:var(--text)}
+  .pub h3 a:hover{color:var(--accent)}
+  .pub .authors{font-size:.88rem; color:var(--muted); margin-bottom:4px}
+  .pub .authors b{color:var(--text); font-weight:600}
+  .pub .venue{font-size:.86rem; color:var(--faint); font-style:italic}
+  .pub .doi{display:inline-block; margin-top:8px; font-size:12.5px; font-weight:500}
+  .pill{
+    display:inline-block; font-size:10.5px; font-weight:600; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--accent-ink); background:var(--accent-wash);
+    border:1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+    padding:2px 7px; border-radius:5px; margin-left:8px; vertical-align:2px;
+  }
+
+  /* patents */
+  .patent{
+    background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px; margin-bottom:12px;
+  }
+  .patent:last-child{margin-bottom:0}
+  .patent .status{font-size:11.5px; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--accent-ink)}
+  .patent h3{font-size:1.05rem; margin:7px 0 8px}
+  .patent .authors{font-size:.88rem; color:var(--muted)}
+  .patent .authors b{color:var(--text); font-weight:600}
+  .patent .reg{font-size:.82rem; color:var(--faint); margin-top:6px}
+
+  footer{
+    border-top:1px solid var(--line); padding:30px 0 44px;
+    font-size:.87rem; color:var(--muted);
+  }
+  footer .fl{display:flex; gap:16px; flex-wrap:wrap; align-items:center; justify-content:space-between}
+
+  @media (max-width:640px){
+    .hero{padding:34px 0 4px}
+    .hero-grid{grid-template-columns:1fr; gap:22px}
+    .portrait{width:132px; height:158px}
+    .pub{grid-template-columns:1fr; gap:4px}
+    .pub .yr{font-size:.88rem; letter-spacing:.06em}
+    .bar-in{gap:8px; padding:8px 12px}
+    .brand{font-size:15.5px}
+    /* keep the nav on one line and let it scroll sideways instead of stacking */
+    nav.links{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none}
+    nav.links::-webkit-scrollbar{display:none}
+    nav.links a{padding:5px 7px; font-size:12.5px; white-space:nowrap}
+    section{padding:36px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#top">Mukesh&nbsp;Delu</a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#patents">Patents</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle colour theme" title="Toggle light / dark">◐</button>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <div class="hero-grid">
+      <img class="portrait"
+           src="https://maitri-lab.com/images/people/2022RMA9055_20220823_163407.jpg"
+           alt="Portrait of Dr. Mukesh Delu">
+      <div>
+        <span class="eyebrow">Ph.D., MNIT Jaipur · 2026</span>
+        <h1>Dr. Mukesh Delu</h1>
+        <div class="role">Assistant Professor of Mathematics</div>
+        <div class="affil">Department of College Education, Government of Rajasthan</div>
+        <div class="contact-line">
+          Fractional calculus · Medical image processing · Machine&nbsp;learning &amp; deep&nbsp;learning
+        </div>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:delu.mukesh@rajasthan.gov.in">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            Email
+          </a>
+          <a class="btn" href="https://scholar.google.com/citations?user=gPuRYYcAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 9l11 7 11-7-11-7Zm0 16.2L5 13.6v4.1c0 2.3 3.1 4.3 7 4.3s7-2 7-4.3v-4.1l-7 4.6Z"/></svg>
+            Google Scholar
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/dr-mukesh-delu-338b70bb/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM2.4 21h5.2V9.4H2.4V21Zm7.6 0h5.2v-6.4c0-3.4 4.4-3.7 4.4 0V21H24v-7.9c0-6.2-7-6-8.8-2.9V9.4h-5.2V21Z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://orcid.org/0009-0003-7228-4364" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".18"/><path d="M8 7.2h1.5v9.6H8V7.2Zm4 0h3.1c2.6 0 4.4 1.9 4.4 4.8s-1.8 4.8-4.4 4.8H12V7.2Zm1.5 1.4v6.8h1.5c1.8 0 2.9-1.3 2.9-3.4s-1.1-3.4-2.9-3.4h-1.5Z"/></svg>
+            ORCID
+          </a>
+          <a class="btn" href="https://maitri-lab.com/mukesh-delu.html" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a16 16 0 0 1 0 18 16 16 0 0 1 0-18Z"/></svg>
+            MAITRI Lab
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="sec-head"><h2>About</h2></div>
+    <p class="lead">
+      I received the M.Sc. degree in Mathematics from the <b>Indian Institute of Technology (IIT) Kanpur</b>
+      in 2021 and the Ph.D. degree from the Department of Mathematics,
+      <b>Malaviya National Institute of Technology (MNIT) Jaipur</b>, in 2026.
+      I am currently an Assistant Professor of Mathematics in the Department of College Education,
+      Government of Rajasthan, and a lifetime member of the Ramanujan Mathematical Society (RMS).
+    </p>
+    <p class="lead">
+      My research sits where <b>fractional calculus</b> meets <b>medical image analysis</b>: designing
+      fractional-order kernels, filters and optimisers, and using them inside deep networks that
+      read retinal fundus images. My doctoral work on fractional-order kernels for retinal image
+      analysis forms the mathematical basis of
+      <a href="https://maitri-lab.com/#products" target="_blank" rel="noopener">ChakshuRakshak&nbsp;AI</a>,
+      a diabetic retinopathy screening system now in clinical validation at SMS Hospital, Jaipur.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Fractional calculus</span>
+      <span class="tag">Medical image processing</span>
+      <span class="tag">Machine learning</span>
+      <span class="tag">Deep learning</span>
+      <span class="tag">Retinal imaging</span>
+      <span class="tag">Diabetic retinopathy screening</span>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education">
+    <div class="sec-head"><h2>Education &amp; career</h2></div>
+    <ul class="timeline">
+      <li>
+        <div class="t">Assistant Professor of Mathematics</div>
+        <div class="s">Department of College Education, Government of Rajasthan · Present</div>
+      </li>
+      <li>
+        <div class="t">Ph.D., Mathematics</div>
+        <div class="s">MNIT Jaipur · 2026 · Supervisor: Dr. Priyanka Harjule</div>
+      </li>
+      <li>
+        <div class="t">M.Sc., Mathematics</div>
+        <div class="s">Indian Institute of Technology Kanpur · 2021</div>
+      </li>
+      <li>
+        <div class="t">Lifetime member</div>
+        <div class="s">Ramanujan Mathematical Society (RMS)</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research">
+    <div class="sec-head"><h2>Research</h2></div>
+
+    <div class="thesis">
+      <div class="label">Doctoral thesis</div>
+      <h3>Retinal Vasculature Analysis with Fractional Order Kernels: Techniques and Applications</h3>
+      <dl class="meta-grid">
+        <div><dt>Institute</dt><dd>Department of Mathematics, MNIT Jaipur</dd></div>
+        <div><dt>Supervisor</dt><dd>Dr. Priyanka Harjule</dd></div>
+        <div><dt>Awarded</dt><dd>2026</dd></div>
+      </dl>
+    </div>
+
+    <div class="cards" style="margin-top:18px">
+      <div class="card">
+        <h3>Fractional-order filtering</h3>
+        <p>Fractional Frangi filters, fractional Hessian curvature analysis and compass-gradient edge
+           masks for enhancing and segmenting retinal vasculature.</p>
+      </div>
+      <div class="card">
+        <h3>Deep networks for grading</h3>
+        <p>Dual-path and fractional-operator architectures for diabetic retinopathy detection,
+           staging and macular edema grading.</p>
+      </div>
+      <div class="card">
+        <h3>Fractional optimisation</h3>
+        <p>Training deep networks with fractional-order gradient descent to improve convergence
+           and screening accuracy.</p>
+      </div>
+      <div class="card">
+        <h3>Datasets &amp; benchmarks</h3>
+        <p>Harmonised multi-source fundus datasets with baseline deep-learning validation for
+           reproducible DR staging.</p>
+      </div>
+    </div>
+
+    <div class="cards" style="margin-top:14px">
+      <div class="card">
+        <h3>ChakshuRakshak AI</h3>
+        <p>AI-based retinal analysis from fundus images — diabetic retinopathy grading, diabetic
+           macular edema grading and a multi-disease screen. In clinical validation at SMS Hospital, Jaipur.</p>
+        <a class="more" href="https://maitri-lab.com/#products" target="_blank" rel="noopener">About the product →</a>
+      </div>
+      <div class="card">
+        <h3>MAITRI Lab, MNIT Jaipur</h3>
+        <p>Mathematics and Artificial Intelligence for Theoretical Reasoning and Innovation —
+           the research group where this work was carried out, led by Dr. Priyanka Harjule.</p>
+        <a class="more" href="https://maitri-lab.com/" target="_blank" rel="noopener">Visit the lab →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section id="publications">
+    <div class="sec-head">
+      <h2>Publications</h2>
+      <span class="count">7 papers</span>
+    </div>
+    <ul class="pubs">
+
+      <li class="pub">
+        <div class="yr">2026</div>
+        <div>
+          <h3><a href="https://doi.org/10.1038/s41598-026-75441-z" target="_blank" rel="noopener">F2D-RetinaNet: a feature-to-decision dual-path network with fractional operators for retinal disease detection and grading</a><span class="pill">Journal</span></h3>
+          <div class="authors"><b>Mukesh Delu</b>, Priyanka Harjule, Rajesh Kumar, Kushal Gajjar, Pilani Nkomozepi</div>
+          <div class="venue">Scientific Reports (Nature)</div>
+          <a class="doi" href="https://doi.org/10.1038/s41598-026-75441-z" target="_blank" rel="noopener">doi:10.1038/s41598-026-75441-z ↗</a>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div class="yr">2026</div>
+        <div>
+          <h3><a href="https://doi.org/10.3390/fractalfract10040246" target="_blank" rel="noopener">A Mathematical Framework for Retinal Vessel Segmentation: Fractional Hessian-Based Curvature Analysis</a><span class="pill">Journal</span></h3>
+          <div class="authors">Priyanka Harjule, <b>Mukesh Delu</b>, Rajesh Kumar, Pilani Nkomozepi</div>
+          <div class="venue">Fractal and Fractional (MDPI)</div>
+          <a class="doi" href="https://doi.org/10.3390/fractalfract10040246" target="_blank" rel="noopener">doi:10.3390/fractalfract10040246 ↗</a>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div class="yr">2026</div>
+        <div>
+          <h3><a href="https://doi.org/10.33889/IJMEMS.2026.11.1.007" target="_blank" rel="noopener">A Harmonized Multi-Source Dataset with Baseline Deep Learning Validation for Staging Diabetic Retinopathy</a><span class="pill">Journal</span></h3>
+          <div class="authors"><b>Mukesh Delu</b>, Priyanka Harjule, Rajesh Kumar, Kushal Gajjar</div>
+          <div class="venue">International Journal of Mathematical, Engineering and Management Sciences</div>
+          <a class="doi" href="https://doi.org/10.33889/IJMEMS.2026.11.1.007" target="_blank" rel="noopener">doi:10.33889/IJMEMS.2026.11.1.007 ↗</a>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div class="yr">2026</div>
+        <div>
+          <h3><a href="https://doi.org/10.1007/978-3-032-18480-1_37" target="_blank" rel="noopener">An Improved Deep Learning Framework for Diabetic Retinopathy Screening Using Fractional-Order Optimisation</a><span class="pill">Conference</span></h3>
+          <div class="authors"><b>Mukesh Delu</b>, Rinki Sharma, Priyanka Harjule, Rajesh Kumar</div>
+          <div class="venue">PReMI 2026, IIT Delhi (Springer)</div>
+          <a class="doi" href="https://doi.org/10.1007/978-3-032-18480-1_37" target="_blank" rel="noopener">doi:10.1007/978-3-032-18480-1_37 ↗</a>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div class="yr">2024</div>
+        <div>
+          <h3><a href="https://doi.org/10.1007/978-981-96-5958-6_27" target="_blank" rel="noopener">Fractional Frangi: Retinal Vessel Enhancement Filtering</a><span class="pill">Conference</span></h3>
+          <div class="authors"><b>Mukesh Delu</b>, Priyanka Harjule</div>
+          <div class="venue">SoCTA 2024, MNIT Jaipur (Springer)</div>
+          <a class="doi" href="https://doi.org/10.1007/978-981-96-5958-6_27" target="_blank" rel="noopener">doi:10.1007/978-981-96-5958-6_27 ↗</a>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div class="yr">2024</div>
+        <div>
+          <h3><a href="https://doi.org/10.1007/978-3-032-14534-5_12" target="_blank" rel="noopener">Extraction of Retinal Vasculature with Fractional Fuzzy Logic</a><span class="pill">Conference</span></h3>
+          <div class="authors"><b>Mukesh Delu</b>, Priyanka Harjule, Sudipta Barman</div>
+          <div class="venue">MIND 2024, Goa (Springer)</div>
+          <a class="doi" href="https://doi.org/10.1007/978-3-032-14534-5_12" target="_blank" rel="noopener">doi:10.1007/978-3-032-14534-5_12 ↗</a>
+        </div>
+      </li>
+
+      <li class="pub">
+        <div class="yr">2023</div>
+        <div>
+          <h3>Modified Fractional Edge Detection Masks Based on Compass Gradient for Retinopathy Screening<span class="pill">Conference</span></h3>
+          <div class="authors"><b>Mukesh Delu</b>, Priyanka Harjule</div>
+          <div class="venue">ICEET 2023, Istanbul (IEEE)</div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============ PATENTS ============ -->
+  <section id="patents">
+    <div class="sec-head">
+      <h2>Patents</h2>
+      <span class="count">Controller General of Patents, Designs &amp; Trade Marks, Govt. of India</span>
+    </div>
+    <div class="patent">
+      <div class="status">Published · 28 Feb 2026</div>
+      <h3>AI-Driven Framework for Diabetic Retinopathy Grading and Related Methods</h3>
+      <div class="authors">Priyanka Harjule, <b>Mukesh Delu</b>, Rajesh Kumar</div>
+      <div class="reg">Reg. No. 202611024093</div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="sec-head"><h2>Contact</h2></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:delu.mukesh@rajasthan.gov.in">delu.mukesh@rajasthan.gov.in</a><br>
+          <a href="mailto:2022rma9055@mnit.ac.in">2022rma9055@mnit.ac.in</a> <span style="color:var(--faint)">(MNIT)</span>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Profiles</h3>
+        <p>
+          <a href="https://orcid.org/0009-0003-7228-4364" target="_blank" rel="noopener">ORCID 0009-0003-7228-4364</a><br>
+          <a href="https://scholar.google.com/citations?user=gPuRYYcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> ·
+          <a href="https://www.linkedin.com/in/dr-mukesh-delu-338b70bb/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Affiliations</h3>
+        <p>
+          Department of College Education, Government of Rajasthan<br>
+          <a href="https://maitri-lab.com/" target="_blank" rel="noopener">MAITRI Lab</a>, Department of Mathematics, MNIT Jaipur
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap fl">
+    <div>© <span id="yr">2026</span> Mukesh Delu</div>
+    <div>Built with GitHub Pages · <a href="https://maitri-lab.com/" target="_blank" rel="noopener">MAITRI Lab</a></div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // theme toggle (remembers choice per browser; safe if storage is blocked)
+  (function(){
+    var root = document.documentElement, btn = document.getElementById('themeBtn');
+    try { var saved = localStorage.getItem('md-theme'); if (saved) root.setAttribute('data-theme', saved); } catch(e){}
+    function current(){
+      var set = root.getAttribute('data-theme');
+      if (set) return set;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    btn.addEventListener('click', function(){
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('md-theme', next); } catch(e){}
+    });
+  })();
+</script>
+
+</body>
+</html>
