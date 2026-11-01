@@ -17,10 +17,10 @@ A single, dependency-free `index.html` (light/dark theme, mobile responsive).
 
 | What | Where in `index.html` |
 | --- | --- |
-| Portrait photo | the `<img class="portrait">` `src` — currently loaded from maitri-lab.com |
+| Portrait photo | replace `photo.jpg` in this repository |
 | New papers | add a `<li class="pub">` block in the Publications section |
 
-## Optional: use a local copy of the photo
+## Files
 
-The portrait is currently hot-linked from `maitri-lab.com`. To make the site fully
-self-contained, save the image as `photo.jpg` in this repository and change the `src` to `photo.jpg`.
+- `index.html` — the whole site
+- `photo.jpg` — portrait used in the header (served from this repository, nothing is hot-linked)
