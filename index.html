@@ -274,32 +274,6 @@
 
   /* ---------- hero ---------- */
   .hero{position:relative; z-index:0}
-  .hero-art{
-    position:absolute; right:-26px; top:-24px; width:370px; height:300px;
-    z-index:-1; pointer-events:none; opacity:.62;
-  }
-  .hero-art path{
-    fill:none; stroke:var(--accent); stroke-width:1.15; stroke-linecap:round; opacity:.45;
-    stroke-dasharray:620; stroke-dashoffset:620;
-    animation:draw 2.4s var(--ease) forwards;
-  }
-  .hero-art path:nth-child(2){animation-delay:.25s}
-  .hero-art path:nth-child(3){animation-delay:.4s}
-  .hero-art path:nth-child(4){animation-delay:.55s}
-  .hero-art path:nth-child(5){animation-delay:.7s}
-  .hero-art path:nth-child(6){animation-delay:.85s}
-  .hero-art path:nth-child(7){animation-delay:1s}
-  .hero-art .ring{
-    fill:none; stroke:var(--accent); stroke-width:1; opacity:0;
-    animation:halo 4.5s var(--ease) 1.1s infinite;
-  }
-  .hero-art .ring.r2{animation-delay:2.3s}
-  .hero-art .fovea{fill:var(--accent); opacity:.35; animation:pulse 4.5s var(--ease) 1.1s infinite}
-  @keyframes draw{to{stroke-dashoffset:0}}
-  @keyframes halo{0%{opacity:.34; transform:scale(.82)} 70%,100%{opacity:0; transform:scale(1.35)}}
-  @keyframes pulse{0%,100%{opacity:.25} 50%{opacity:.5}}
-  .hero-art .ring, .hero-art .fovea{transform-origin:150px 150px}
-
   @keyframes riseIn{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
   @keyframes portraitIn{from{opacity:0; transform:translateY(18px) scale(.95)} to{opacity:1; transform:none}}
   .portrait{animation:portraitIn .9s var(--ease) both; transition:transform .45s var(--ease), box-shadow .45s var(--ease)}
@@ -410,7 +384,6 @@
   .totop svg{width:17px; height:17px}
 
   @media (max-width:860px){
-    .hero-art{display:none}
     .bg-grid{opacity:.25; background-size:48px 48px}
   }
   @media (max-width:640px){
@@ -426,7 +399,6 @@
     }
     html{scroll-behavior:auto}
     .reveal{opacity:1 !important; transform:none !important}
-    .hero-art path{stroke-dashoffset:0}
     .bg-deco i{animation:none}
   }
 </style>
@@ -456,19 +428,6 @@
 
   <!-- ============ HERO ============ -->
   <div class="hero">
-    <!-- decorative retinal-vasculature motif -->
-    <svg class="hero-art" viewBox="0 0 360 300" aria-hidden="true" focusable="false">
-      <path d="M12 288 C 80 262, 116 206, 150 150 C 184 94, 236 62, 348 28"/>
-      <path d="M150 150 C 162 108, 202 92, 256 94"/>
-      <path d="M150 150 C 128 118, 118 76, 128 26"/>
-      <path d="M112 202 C 148 194, 186 208, 234 232"/>
-      <path d="M234 232 C 262 238, 288 252, 304 274"/>
-      <path d="M256 94 C 286 90, 308 78, 326 58"/>
-      <path d="M128 26 C 152 18, 178 22, 200 34"/>
-      <circle class="ring" cx="150" cy="150" r="24"/>
-      <circle class="ring r2" cx="150" cy="150" r="24"/>
-      <circle class="fovea" cx="150" cy="150" r="5"/>
-    </svg>
     <div class="hero-grid">
       <img class="portrait"
            src="photo.jpg"
@@ -511,17 +470,18 @@
   <section id="about">
     <div class="sec-head"><h2>About</h2></div>
     <p class="lead">
-      I received the M.Sc. degree in Mathematics from the <b>Indian Institute of Technology (IIT) Kanpur</b>
-      in 2021 and the Ph.D. degree from the Department of Mathematics,
-      <b>Malaviya National Institute of Technology (MNIT) Jaipur</b>, in 2026.
-      I am currently an Assistant Professor of Mathematics in the Department of College Education,
-      Government of Rajasthan, and a lifetime member of the Ramanujan Mathematical Society (RMS).
+      Dr. Mukesh Delu received the M.Sc. degree in Mathematics from the
+      <b>Indian Institute of Technology (IIT) Kanpur</b> in 2021 and the Ph.D. degree from the
+      Department of Mathematics, <b>Malaviya National Institute of Technology (MNIT) Jaipur</b>, in 2026.
+      Dr. Delu is currently an Assistant Professor of Mathematics in the Department of College
+      Education, Government of Rajasthan, and a lifetime member of the Ramanujan Mathematical
+      Society (RMS).
     </p>
     <p class="lead">
-      My research sits where <b>fractional calculus</b> meets <b>medical image analysis</b>: designing
-      fractional-order kernels, filters and optimisers, and using them inside deep networks that
-      read retinal fundus images. My doctoral work on fractional-order kernels for retinal image
-      analysis forms the mathematical basis of
+      The research of Dr. Delu sits where <b>fractional calculus</b> meets <b>medical image analysis</b>:
+      designing fractional-order kernels, filters and optimisers, and using them inside deep networks
+      that read retinal fundus images. This doctoral work on fractional-order kernels for retinal
+      image analysis forms the mathematical basis of
       <a href="https://chakshurakshakai.com/" target="_blank" rel="noopener">ChakshuRakshak&nbsp;AI</a>,
       a diabetic retinopathy screening system now in clinical validation at SMS Hospital, Jaipur.
     </p>
